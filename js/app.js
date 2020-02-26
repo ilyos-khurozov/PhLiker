@@ -41,7 +41,7 @@ function load(){
         paginate();
 
     }).fail(function(){
-        alert("Failed");
+        alert("Failed message");
     });
 
     $("#inputTop").val(tagText);
