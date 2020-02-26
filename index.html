@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhLiker</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body style="overflow: hidden;">
+    <nav class="navbar navbar-expand bg-dark navbar-dark justify-content-end">
+        <input type="text" id="inputTop" placeholder="Enter tag(s)" 
+            class="form-control form-control-pliantext mx-2" style="width: 15rem">
+        <button type="button" class="btn btn-success" onclick="search(0)" id="btnTop">Search</button>
+    </nav>
+    <div class="container-m">
+        <table id="grid" class="table table-borderless">
+            <tr>
+                <td>
+                    <div class="navbar navbar-expand navbar-dark justify-content-center " style="margin-top: 40vh;">
+                        <input type="text" id="inputCenter" placeholder="Enter tag(s)"
+                            class="form-control form-control-pliantext mx-2" style="width: 15rem">
+                        <button type="button" class="btn btn-success" onclick="search(1)" id="btnCenter">Search</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal fade" id="detail">
+        <div class="modal-dialog">
+            <div class=" modal-content">
+                <div class="modal-header" style="padding: .5rem;">
+                    <button class="btn btn-outline-danger" data-dismiss="modal" id="btnBack">Back to result</button>
+                </div>
+                <div class="modal-body">
+                    <div style="float: left; width: 40%;">
+                        <img src="" id="curImage" >
+                    </div>
+                    <div style="float: right; width: 60%;">
+                        <h4>Title:</h4>
+                        <span id="title" class="text-break"></span>
+                        <h4>Photograph:</h4>
+                        <span id="photograph" class="text-break"></span>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center" style="padding: .1rem;">
+                    <ul class="pagination">
+                        <li class="page-item" onclick="prevImage();" id="btnPrevImage"><p class="page-link" style="cursor: pointer;">Previous</p></li>
+                        <li class="page-item" onclick="nextImage();" id="btnNextImage"><p class="page-link" style="cursor: pointer;">Next</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
